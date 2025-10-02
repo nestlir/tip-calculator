@@ -54,4 +54,4 @@ git clone https://github.com/neslir/tip-calculator.git
 cd tip-calculator
 
 # Open in your browser
-open index.html
+open index.html# tip-calculator
