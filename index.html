@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy-to-use tip calculator for splitting bills with friends">
+    <title>TipEase - Pink & Purple Tipping Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="decoration decoration-1">
+        <i class="fas fa-utensils" aria-hidden="true"></i>
+    </div>
+    <div class="decoration decoration-2">
+        <i class="fas fa-glass-cheers" aria-hidden="true"></i>
+    </div>
+    
+    <main class="container">
+        <header>
+            <h1><i class="fas fa-calculator" aria-hidden="true"></i> TipEase</h1>
+            <p>Split bills easily with friends. Just enter your bill amount and let TipEase handle the math!</p>
+        </header>
+        
+        <section class="calculator" aria-label="Tip calculator">
+            <div class="bill-input">
+                <h2>How much was the bill?</h2>
+                <div class="input-group">
+                    <label for="billAmount" class="sr-only">Bill amount</label>
+                    <input type="number" id="billAmount" placeholder="0.00" min="0" step="0.01" value="100">
+                </div>
+            </div>
+            
+            <fieldset class="tip-options">
+                <legend class="sr-only">Select tip percentage</legend>
+                <button class="tip-btn active" data-tip="10" aria-pressed="true">10%</button>
+                <button class="tip-btn" data-tip="15" aria-pressed="false">15%</button>
+                <button class="tip-btn" data-tip="20" aria-pressed="false">20%</button>
+                <button class="tip-btn" data-tip="25" aria-pressed="false">25%</button>
+            </fieldset>
+            
+            <div class="people-section">
+                <div class="section-title">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <h2>Split Among Friends</h2>
+                </div>
+                <div class="people-input">
+                    <button id="decreasePeople" aria-label="Decrease number of people">
+                        <i class="fas fa-minus" aria-hidden="true"></i>
+                    </button>
+                    <div class="people-count" id="peopleCount" aria-live="polite">4</div>
+                    <button id="increasePeople" aria-label="Increase number of people">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <section class="results" aria-label="Calculation results">
+                <div class="result-item">
+                    <span class="result-label">Tip Amount</span>
+                    <span class="result-value tip-amount" id="tipAmount">$10.00</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Total Amount</span>
+                    <span class="result-value total-amount" id="totalAmount">$110.00</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Per Person</span>
+                    <span class="result-value" id="perPerson">$27.50</span>
+                </div>
+                <div class="total-label">Total including tip</div>
+                
+                <div class="per-person">
+                    Each friend pays: <span class="total-amount" id="finalPerPerson">$27.50</span>
+                </div>
+                
+                <button class="reset-btn" id="resetBtn">
+                    <i class="fas fa-redo" aria-hidden="true"></i> Start New Calculation
+                </button>
+            </section>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
