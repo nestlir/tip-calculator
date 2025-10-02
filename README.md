@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![TipEase Calculator](screenshot.png)
+![TipEase Calculator](assets/images/screenshot.png)
 
 *A beautifully designed tip calculator with real-time calculations and smooth animations*
 
